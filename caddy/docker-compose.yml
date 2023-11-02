@@ -22,7 +22,11 @@ services:
       - LOG_KEYCLOAK=$LOG_KEYCLOAK
       - EMAIL_KEYCLOAK=$EMAIL_KEYCLOAK
       - HOSTNAME_KEYCLOAK=$HOSTNAME_KEYCLOAK
-      
+      - DOMAIN_NESTJS=$DOMAIN_NESTJS
+      - LOG_NESTJS=$LOG_NESTJS
+      - EMAIL_NESTJS=$EMAIL_NESTJS
+      - HOSTNAME_NESTJS=$HOSTNAME_NESTJS
+
 networks:
   reverse-proxy-network:
     external: true

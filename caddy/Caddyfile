@@ -1,3 +1,4 @@
+# Keycloak
 {$DOMAIN_KEYCLOAK}:443 {
   log {
     level INFO
@@ -10,4 +11,19 @@
   encode gzip
 
   reverse_proxy {$HOSTNAME_KEYCLOAK}
+}
+
+# NestJS (API)
+{$DOMAIN_NESTJS}:443 {
+  log {
+    level INFO
+    output file {$LOG_NESTJS} {
+    roll_size 10MB
+    roll_keep 10
+    }
+  }
+  tls {$EMAIL_NESTJS}
+  encode gzip
+
+  reverse_proxy {$HOSTNAME_NESTJS}
 }
