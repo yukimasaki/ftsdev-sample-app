@@ -26,6 +26,10 @@ services:
       - LOG_NESTJS=$LOG_NESTJS
       - EMAIL_NESTJS=$EMAIL_NESTJS
       - HOSTNAME_NESTJS=$HOSTNAME_NESTJS
+      - DOMAIN_NUXT=$DOMAIN_NUXT
+      - LOG_NUXT=$LOG_NUXT
+      - EMAIL_NUXT=$EMAIL_NUXT
+      - HOSTNAME_NUXT=$HOSTNAME_NUXT
 
 networks:
   reverse-proxy-network:

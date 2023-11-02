@@ -27,3 +27,18 @@
 
   reverse_proxy {$HOSTNAME_NESTJS}
 }
+
+# Nuxt3
+{$DOMAIN_NUXT}:443 {
+  log {
+    level INFO
+    output file {$LOG_NUXT} {
+    roll_size 10MB
+    roll_keep 10
+    }
+  }
+  tls {$EMAIL_NUXT}
+  encode gzip
+
+  reverse_proxy {$HOSTNAME_NUXT}
+}
