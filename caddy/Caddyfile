@@ -1,0 +1,13 @@
+{$DOMAIN_KEYCLOAK}:443 {
+  log {
+    level INFO
+    output file {$LOG_KEYCLOAK} {
+    roll_size 10MB
+    roll_keep 10
+    }
+  }
+  tls {$EMAIL_KEYCLOAK}
+  encode gzip
+
+  reverse_proxy {$HOSTNAME_KEYCLOAK}
+}
