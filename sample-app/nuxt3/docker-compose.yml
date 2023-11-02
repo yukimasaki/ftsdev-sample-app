@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  nuxt:
+    container_name: nuxt
+    networks:
+      default:
+      reverse-proxy-network:
+        aliases:
+          - nuxt-container
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/work
+    tty: true
+    restart: always
+
+networks:
+  reverse-proxy-network:
+    external: true
