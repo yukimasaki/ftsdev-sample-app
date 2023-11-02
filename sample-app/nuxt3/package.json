@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "keycloak-js": "^22.0.5"
-  },
-  "devDependencies": {
-    "@types/keycloak-js": "^3.4.1"
-  }
-}
