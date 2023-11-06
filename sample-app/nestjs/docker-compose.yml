@@ -5,6 +5,20 @@ volumes:
       driver: local
 
 services:
+  redis:
+    container_name: redis
+    networks:
+      default:
+      reverse-proxy-network:
+        aliases:
+          - redis-container
+    image: "redis:latest"
+    ports:
+      - "6379:6379"
+    volumes:
+      - "./redis-data:/data"
+    restart: always
+
   postgres:
     container_name: postgres
     networks:

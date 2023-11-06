@@ -2,3 +2,4 @@
 caddy-config
 caddy-data
 node_modules
+redis-data

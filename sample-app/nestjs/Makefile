@@ -8,3 +8,5 @@ dev:
 	docker compose exec nestjs yarn start:dev
 pg:
 	docker compose exec postgres sh
+redis:
+	docker compose exec redis sh
