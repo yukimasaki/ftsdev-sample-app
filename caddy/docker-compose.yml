@@ -18,10 +18,6 @@ services:
       - ./caddy-config:/config
       - ./caddy-data:/data
     environment:
-      - DOMAIN_KEYCLOAK=$DOMAIN_KEYCLOAK
-      - LOG_KEYCLOAK=$LOG_KEYCLOAK
-      - EMAIL_KEYCLOAK=$EMAIL_KEYCLOAK
-      - HOSTNAME_KEYCLOAK=$HOSTNAME_KEYCLOAK
       - DOMAIN_NESTJS=$DOMAIN_NESTJS
       - LOG_NESTJS=$LOG_NESTJS
       - EMAIL_NESTJS=$EMAIL_NESTJS
