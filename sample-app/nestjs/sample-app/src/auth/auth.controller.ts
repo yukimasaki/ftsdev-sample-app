@@ -131,6 +131,7 @@ export class AuthController {
       httpOnly: true,
       secure: false,
       expires: new Date(now.getTime() + (expiresRefreshToken)),
+      path: '/auth/refresh',
     });
 
     req.res.cookie('session_id', loginResponse.tokens.sessionId, {
