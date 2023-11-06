@@ -1,4 +1,4 @@
-import { ApiProperty } from "@nestjs/swagger";
+import { ApiProperty, OmitType } from "@nestjs/swagger";
 import { IsEmail, IsInt, IsPositive, IsString, MaxLength } from "class-validator";
 
 export class User {
@@ -33,3 +33,8 @@ export class User {
   @IsString()
   hashedPassword: string;
 }
+
+export class UserOmitPassword extends OmitType(
+  User,
+  ['hashedPassword'],
+) { }
