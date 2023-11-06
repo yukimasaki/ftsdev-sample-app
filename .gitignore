@@ -1,5 +1,4 @@
 .env
 caddy-config
 caddy-data
-keycloak/docker
 node_modules
